@@ -1,4 +1,4 @@
-export default interface Book {
+export interface Book {
     id: number;
     name: string;
     price: number;

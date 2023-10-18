@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import Book from '../types/book';
+import { Book } from "../types/book";
 
 const BookList: React.FC = () => {
   const books = useSelector((state: RootState) => state.books);
