@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../redux/reducers/booksReducer';
+import { RootState } from '../redux/reducers/rootReducer';
 import { deleteBook } from '../redux/actions/bookAction';
 import { Link } from 'react-router-dom';
 import {
@@ -17,6 +17,7 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import Book from '../types/book';
 
 const BookList: React.FC = () => {
   const books = useSelector((state: RootState) => state.books);
@@ -46,7 +47,7 @@ const BookList: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {books.map((book) => (
+            {books.map((book:Book) => (
               <TableRow key={book.id}>
                 <TableCell>{book.name}</TableCell>
                 <TableCell>${book.price}</TableCell>
