@@ -8,7 +8,7 @@ import { TextField, Button, Grid, Paper, Typography, Container } from '@mui/mate
 const BookDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const bookId = id;
-  const book = useSelector((state: RootState) => state.books.find((b) => b.id === bookId));
+  const book = useSelector((state: RootState) => state.books.find((b) => b.id == bookId));
   const dispatch = useDispatch();
   const history = useNavigate();
 

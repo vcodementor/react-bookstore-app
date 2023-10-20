@@ -43,6 +43,7 @@ const BookList: React.FC = () => {
               <TableCell sx={{ color: 'white' }}>Name</TableCell>
               <TableCell sx={{color: 'white' }}>Price (USD)</TableCell>
               <TableCell sx={{ color: 'white' }}>Category</TableCell>
+              <TableCell sx={{ color: 'white' }}>Description</TableCell>
               <TableCell sx={{ color: 'white' }}>Action</TableCell>
             </TableRow>
           </TableHead>
@@ -52,6 +53,7 @@ const BookList: React.FC = () => {
                 <TableCell>{book.name}</TableCell>
                 <TableCell>${book.price}</TableCell>
                 <TableCell>{book.category}</TableCell>
+                <TableCell>{book.description}</TableCell>
                 <TableCell>
                   <Button
                     variant="contained"
